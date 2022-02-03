@@ -2,30 +2,38 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
+    <script>
+      function changePic() {
+        document.getElementById("demo").src = "images/profile-pic (3).png";
+      }
+      function resetPic() {
+        document.getElementById("demo").src = "images/profile-pic (1).png";
+      }
+    </script>
   </head>
   <body>
-    <h1>Babatunde Awoyemi</h1>
-    <a href="#">One</a>
-    <a href="#">Two</a>
-    <a href="#">Three</a>
-    <a href="#">Contact Me</a>
-    <h2>Favorite Foods</h2>
-    <ul>
-      <li>Rice</li>
-      <li>Beans</li>
-      <li>Bread</li>
-      <li>Yam</li>
-    </ul>
-    <h2>Achievements</h2>
-    <p>Progress in this course (100%) <progress value="100" max="100"></progress></p>
-    <p>Progress in the specialization capstone (20%) <progress value="20" max="100"></progress></p>
-    <p>Progress in life's goals (10%) <progress value="10" max="100"></progress></p>
-    <h2>More about me</h2>
-    <details open>
-      <summary>My childhood</summary>
-      I was born in Nigeria
-    </details>
-    <p> <img src="http://www.intro-webdesign.com/images/newlogo.png" alt="WD4E"> This page was created by Tunde Awoyemi and Collen Van Lent. To leaqrn more about web design, visit <a href="#">Intro to Web Design.</a></p>
+    <div class="test">
+      <img
+        src="images/profile-pic (1).png"
+        alt=""
+        id="demo"
+        width="100px"
+        onmouseover="changePic()"
+        onmouseleave="resetPic()"
+      />
+      <button
+        onclick="document.getElementById('demo').src = 'images/profile-pic.png'"
+      >
+        Swap One
+      </button>
+      <button
+        onclick="document.getElementById('demo').src = 'images/profile-pic (2).png'"
+      >
+        Swap One
+      </button>
+    </div>
   </body>
 </html>
